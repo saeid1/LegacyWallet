@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Legacy Wallet — Digitales Erbe für selbstverwahrte Vermögenswerte</title>
-<meta name="description" content="Legacy Wallet übergibt den Zugang zu Ihren digitalen Vermögenswerten an die Menschen, die Sie bestimmen — ohne Verwahrer und ohne dass zu Lebzeiten jemand Ihre Schlüssel sieht.">
+<title data-en="Legacy Wallet — Digital Inheritance for Self-Custodied Assets">Legacy Wallet — Digitales Erbe für selbstverwahrte Vermögenswerte</title>
+<meta name="description" content="Legacy Wallet übergibt den Zugang zu Ihren digitalen Vermögenswerten an die Menschen, die Sie bestimmen — ohne Verwahrer und ohne dass zu Lebzeiten jemand Ihre Schlüssel sieht." data-en-content="Legacy Wallet hands access to your digital assets to the people you name — with no custodian, and without anyone seeing your keys while you are alive.">
 <meta name="theme-color" content="#05090F">
 
 <meta property="og:type" content="website">
-<meta property="og:locale" content="de_DE">
-<meta property="og:title" content="Legacy Wallet — Digitales Erbe für selbstverwahrte Vermögenswerte">
-<meta property="og:description" content="Ihr Vermögen überlebt Sie. Ihre Schlüssel sollten es auch.">
+<meta property="og:locale" content="de_DE" data-en-content="en_US">
+<meta property="og:title" content="Legacy Wallet — Digitales Erbe für selbstverwahrte Vermögenswerte" data-en-content="Legacy Wallet — Digital Inheritance for Self-Custodied Assets">
+<meta property="og:description" content="Ihr Vermögen überlebt Sie. Ihre Schlüssel sollten es auch." data-en-content="Your wealth outlives you. Your keys should too.">
 <meta property="og:image" content="assets/img/hero-cube.jpg">
 <meta name="twitter:card" content="summary_large_image">
 
@@ -35,21 +35,25 @@
     </a>
 
     <button class="nav-toggle" type="button" id="navToggle"
-            aria-controls="primaryNav" aria-expanded="false" aria-label="Menü öffnen">
+            aria-controls="primaryNav" aria-expanded="false" aria-label="Menü öffnen" data-en-aria-label="Open menu">
       <span class="nav-toggle__bars" aria-hidden="true"></span>
     </button>
 
-    <nav class="nav" id="primaryNav" aria-label="Hauptnavigation">
-      <a href="#problem">Das Problem</a>
-      <a href="#architektur">Architektur</a>
-      <a href="#funktionsweise">Funktionsweise</a>
-      <a href="#sicherheit">Sicherheit</a>
-      <a href="#fuer-wen">Für wen</a>
+    <nav class="nav" id="primaryNav" aria-label="Hauptnavigation" data-en-aria-label="Main navigation">
+      <a href="#problem" data-en="The Problem">Das Problem</a>
+      <a href="#architektur" data-en="Architecture">Architektur</a>
+      <a href="#funktionsweise" data-en="How It Works">Funktionsweise</a>
+      <a href="#sicherheit" data-en="Security">Sicherheit</a>
+      <a href="#fuer-wen" data-en="Who It Is For">Für wen</a>
     </nav>
 
     <div class="header__actions">
-      <span class="lang">DE&nbsp;/&nbsp;<a href="#kontakt">EN</a></span>
-      <a class="btn btn--sm" href="#kontakt">Konzept anfordern</a>
+      <div class="lang" id="langSwitch" role="group" aria-label="Sprache" data-en-aria-label="Language">
+        <button class="lang__btn is-active" type="button" data-lang="de" aria-pressed="true" lang="de">DE</button>
+        <span class="lang__sep" aria-hidden="true">/</span>
+        <button class="lang__btn" type="button" data-lang="en" aria-pressed="false" lang="en">EN</button>
+      </div>
+      <a class="btn btn--sm" href="#kontakt" data-en="Request the concept">Konzept anfordern</a>
     </div>
   </div>
 </header>
@@ -61,21 +65,21 @@
   <div class="hero__glow" aria-hidden="true"></div>
   <div class="wrap hero__inner">
     <div class="hero__copy">
-      <span class="eyebrow">Digitales Erbe · Dezentrale Wallet-Vererbung</span>
-      <h1 class="h1">Ihr Vermögen überlebt Sie.<br>Ihre Schlüssel sollten es auch.</h1>
-      <p class="lead lead--lg">Legacy Wallet übergibt den Zugang zu Ihren digitalen Vermögenswerten an die Menschen, die Sie bestimmen — ohne Verwahrer, ohne Vertrauensvorschuss, und ohne dass zu Lebzeiten irgendjemand Ihre Schlüssel zu sehen bekommt.</p>
+      <span class="eyebrow" data-en="Digital Inheritance · Decentralised Wallet Succession">Digitales Erbe · Dezentrale Wallet-Vererbung</span>
+      <h1 class="h1" data-en="Your wealth outlives you.<br>Your keys should too.">Ihr Vermögen überlebt Sie.<br>Ihre Schlüssel sollten es auch.</h1>
+      <p class="lead lead--lg" data-en="Legacy Wallet hands access to your digital assets to the people you name — with no custodian, no leap of faith, and without anyone getting to see your keys while you are alive.">Legacy Wallet übergibt den Zugang zu Ihren digitalen Vermögenswerten an die Menschen, die Sie bestimmen — ohne Verwahrer, ohne Vertrauensvorschuss, und ohne dass zu Lebzeiten irgendjemand Ihre Schlüssel zu sehen bekommt.</p>
       <div class="btn-row">
-        <a class="btn btn--primary" href="#kontakt">Konzept anfordern</a>
-        <a class="btn btn--ghost" href="#architektur">Architektur ansehen</a>
+        <a class="btn btn--primary" href="#kontakt" data-en="Request the concept">Konzept anfordern</a>
+        <a class="btn btn--ghost" href="#architektur" data-en="See the architecture">Architektur ansehen</a>
       </div>
       <p class="status">
         <span class="status__dot" aria-hidden="true"></span>
-        <span class="status__text">In Entwicklung. Pilotphase ab Q[X] 202[X].</span>
+        <span class="status__text" data-en="In development. Pilot phase from Q[X] 202[X].">In Entwicklung. Pilotphase ab Q[X] 202[X].</span>
       </p>
     </div>
     <div class="hero__art">
       <img src="assets/img/hero-cube.jpg" width="470" height="470"
-           alt="Ein Schlüssel, mehrere Teile — isometrische Darstellung verketteter Tresor-Würfel" fetchpriority="high">
+           alt="Ein Schlüssel, mehrere Teile — isometrische Darstellung verketteter Tresor-Würfel" data-en-alt="One key, several parts — an isometric view of chained vault cubes" fetchpriority="high">
     </div>
   </div>
 </section>
@@ -84,16 +88,16 @@
 <section class="section">
   <div class="wrap section__inner">
     <div class="stack">
-      <span class="eyebrow">Das Krypto-Dilemma</span>
-      <h2 class="h2">Sicherheit und Endlichkeit sind bisher dasselbe.</h2>
+      <span class="eyebrow" data-en="The Crypto Dilemma">Das Krypto-Dilemma</span>
+      <h2 class="h2" data-en="So far, security and finality have been the same thing.">Sicherheit und Endlichkeit sind bisher dasselbe.</h2>
       <div class="split__copy" style="gap:20px">
         <div class="rule rule--cyan">
-          <p class="rule__title rule__title--cyan">Absolute Unzensierbarkeit</p>
-          <p class="body body--dim" style="font-size:16px;line-height:1.65">Keine Bank, kein Staat, keine zentrale Instanz kann auf das Vermögen zugreifen.</p>
+          <p class="rule__title rule__title--cyan" data-en="Absolute censorship resistance">Absolute Unzensierbarkeit</p>
+          <p class="body body--dim" style="font-size:16px;line-height:1.65" data-en="No bank, no state, no central authority can touch the assets.">Keine Bank, kein Staat, keine zentrale Instanz kann auf das Vermögen zugreifen.</p>
         </div>
         <div class="rule rule--gold">
-          <p class="rule__title">Absolute Endlichkeit</p>
-          <p class="body body--dim" style="font-size:16px;line-height:1.65">Stirbt der Inhaber des Private Keys, gibt es keinen Reset-Button. Das Vermögen ist auf ewig im Code gefangen. Krypto-Systeme haben kein Konzept für den Tod.</p>
+          <p class="rule__title" data-en="Absolute finality">Absolute Endlichkeit</p>
+          <p class="body body--dim" style="font-size:16px;line-height:1.65" data-en="When the holder of the private key dies, there is no reset button. The assets stay locked in code forever. Crypto systems have no concept of death.">Stirbt der Inhaber des Private Keys, gibt es keinen Reset-Button. Das Vermögen ist auf ewig im Code gefangen. Krypto-Systeme haben kein Konzept für den Tod.</p>
         </div>
       </div>
     </div>
@@ -101,7 +105,7 @@
     <figure class="figure reveal">
       <button class="figure__btn" type="button" data-lightbox="assets/img/fig-dilemma.jpg">
         <img src="assets/img/fig-dilemma.jpg" width="1376" height="470" loading="lazy"
-             alt="Gegenüberstellung von Sicherheit und Endlichkeit: ein unzugänglicher Tresor gegenüber einem verlorenen Schlüssel">
+             alt="Gegenüberstellung von Sicherheit und Endlichkeit: ein unzugänglicher Tresor gegenüber einem verlorenen Schlüssel" data-en-alt="Security set against finality: an impenetrable vault beside a lost key">
       </button>
     </figure>
   </div>
@@ -111,39 +115,39 @@
 <section class="section section--alt" id="problem">
   <div class="wrap section__inner">
     <div class="stack">
-      <span class="eyebrow">Warum Krypto-Vererbung heute scheitert</span>
-      <h2 class="h2">Ein Testament regelt Ihr Haus. Es regelt nicht Ihre Seed Phrase.</h2>
-      <p class="lead">Zwischen Eigentümer und Erbe liegen vier Lücken, die kein Notar und keine Börse schließen kann. Der übliche Ausweg — den Schlüssel jemandem im Voraus zu geben — ist kein Nachlass, sondern eine Schenkung mit offenem Datum.</p>
+      <span class="eyebrow" data-en="Why crypto inheritance fails today">Warum Krypto-Vererbung heute scheitert</span>
+      <h2 class="h2" data-en="A will settles your house. It does not settle your seed phrase.">Ein Testament regelt Ihr Haus. Es regelt nicht Ihre Seed Phrase.</h2>
+      <p class="lead" data-en="Four gaps sit between owner and heir that no notary and no exchange can close. The usual workaround — handing someone the key in advance — is not an estate plan; it is a gift with an open date.">Zwischen Eigentümer und Erbe liegen vier Lücken, die kein Notar und keine Börse schließen kann. Der übliche Ausweg — den Schlüssel jemandem im Voraus zu geben — ist kein Nachlass, sondern eine Schenkung mit offenem Datum.</p>
     </div>
 
     <div class="grid reveal">
       <div class="card">
         <span class="card__label">Discovery</span>
-        <p class="body">Welche Wallets, Token oder DeFi-Positionen existieren überhaupt? Meist unbekannt.</p>
+        <p class="body" data-en="Which wallets, tokens or DeFi positions even exist? Usually nobody knows.">Welche Wallets, Token oder DeFi-Positionen existieren überhaupt? Meist unbekannt.</p>
       </div>
       <div class="card">
         <span class="card__label">Verification</span>
-        <p class="body">Wer beweist der Blockchain, dass der Erbfall tatsächlich eingetreten ist?</p>
+        <p class="body" data-en="Who proves to the blockchain that the owner has actually died?">Wer beweist der Blockchain, dass der Erbfall tatsächlich eingetreten ist?</p>
       </div>
       <div class="card">
         <span class="card__label">Authorization</span>
-        <p class="body">Wer hat die technische Berechtigung, den Zugriff freizugeben, ohne den Key zu kennen?</p>
+        <p class="body" data-en="Who is technically entitled to release access without knowing the key?">Wer hat die technische Berechtigung, den Zugriff freizugeben, ohne den Key zu kennen?</p>
       </div>
       <div class="card">
         <span class="card__label">Distribution</span>
-        <p class="body">Wie gelangen die Assets sicher zu den Erben, ohne abgefangen zu werden?</p>
+        <p class="body" data-en="How do the assets reach the heirs safely, without being intercepted along the way?">Wie gelangen die Assets sicher zu den Erben, ohne abgefangen zu werden?</p>
       </div>
     </div>
 
     <div class="banner reveal">
-      <p><span class="gold-lead">Fazit:</span> Eine echte Lösung muss diesen Abgrund lückenlos überbrücken — ohne die Dezentralität aufzugeben.</p>
+      <p data-en="<span class=&quot;gold-lead&quot;>Bottom line:</span> A real solution has to bridge this gap end to end — without giving up decentralisation."><span class="gold-lead">Fazit:</span> Eine echte Lösung muss diesen Abgrund lückenlos überbrücken — ohne die Dezentralität aufzugeben.</p>
     </div>
 
-    <div class="table-scroll reveal" tabindex="0" role="region" aria-label="Vergleich der Verwahrungsmodelle">
+    <div class="table-scroll reveal" tabindex="0" role="region" aria-label="Vergleich der Verwahrungsmodelle" data-en-aria-label="Comparison of custody models">
       <table class="compare">
         <thead>
           <tr>
-            <th scope="col">Das Ende des Entweder-Oder</th>
+            <th scope="col" data-en="The end of either/or">Das Ende des Entweder-Oder</th>
             <th scope="col">Custodial Exchanges</th>
             <th scope="col">Hardware Wallets</th>
             <th scope="col" class="col-lw">Legacy Wallet</th>
@@ -151,28 +155,28 @@
         </thead>
         <tbody>
           <tr>
-            <th scope="row">Wer hält den Key?</th>
-            <td class="is-bad">Betreiber</td>
-            <td class="is-good">Nutzer</td>
-            <td class="col-lw">Nutzer — non-custodial</td>
+            <th scope="row" data-en="Who holds the key?">Wer hält den Key?</th>
+            <td class="is-bad" data-en="Operator">Betreiber</td>
+            <td class="is-good" data-en="User">Nutzer</td>
+            <td class="col-lw" data-en="User — non-custodial">Nutzer — non-custodial</td>
           </tr>
           <tr>
-            <th scope="row">Schutz vor Lebend-Verlust</th>
-            <td class="is-good">Hoch</td>
-            <td class="is-bad">Gering / Verlustrisiko</td>
-            <td class="col-lw">Hoch</td>
+            <th scope="row" data-en="Protection against loss while alive">Schutz vor Lebend-Verlust</th>
+            <td class="is-good" data-en="High">Hoch</td>
+            <td class="is-bad" data-en="Low / risk of loss">Gering / Verlustrisiko</td>
+            <td class="col-lw" data-en="High">Hoch</td>
           </tr>
           <tr>
-            <th scope="row">Nachlass-Mechanismus</th>
-            <td class="is-bad">Support-Ticket</td>
-            <td class="is-bad">Seed Phrase verstecken</td>
-            <td class="col-lw">Programmierbar im Smart Contract</td>
+            <th scope="row" data-en="Inheritance mechanism">Nachlass-Mechanismus</th>
+            <td class="is-bad" data-en="Support ticket">Support-Ticket</td>
+            <td class="is-bad" data-en="Hide the seed phrase">Seed Phrase verstecken</td>
+            <td class="col-lw" data-en="Programmable in the smart contract">Programmierbar im Smart Contract</td>
           </tr>
           <tr>
-            <th scope="row">Zensurresistenz</th>
-            <td class="is-bad">Keine</td>
-            <td class="is-good">Absolut</td>
-            <td class="col-lw">Absolut</td>
+            <th scope="row" data-en="Censorship resistance">Zensurresistenz</th>
+            <td class="is-bad" data-en="None">Keine</td>
+            <td class="is-good" data-en="Absolute">Absolut</td>
+            <td class="col-lw" data-en="Absolute">Absolut</td>
           </tr>
         </tbody>
       </table>
@@ -184,27 +188,27 @@
 <section class="section" id="architektur">
   <div class="wrap section__inner">
     <div class="stack">
-      <span class="eyebrow">Architektur des Vertrauens</span>
-      <h2 class="h2">Code statt Intermediäre.</h2>
+      <span class="eyebrow" data-en="An architecture of trust">Architektur des Vertrauens</span>
+      <h2 class="h2" data-en="Code instead of intermediaries.">Code statt Intermediäre.</h2>
     </div>
 
     <div class="split">
       <div class="split__copy">
         <div class="panel panel--cyan">
-          <p class="panel__label panel__label--cyan">Ebene 1 — Off-Chain App</p>
-          <p class="body">Lokale Schlüsselgenerierung. Der Private Key verlässt niemals das Gerät des Nutzers. Die App dient zur Signierung und zur Verwaltung des Legacy-Plans.</p>
+          <p class="panel__label panel__label--cyan" data-en="Layer 1 — off-chain app">Ebene 1 — Off-Chain App</p>
+          <p class="body" data-en="Local key generation. The private key never leaves the user’s device. The app is there to sign and to manage the legacy plan.">Lokale Schlüsselgenerierung. Der Private Key verlässt niemals das Gerät des Nutzers. Die App dient zur Signierung und zur Verwaltung des Legacy-Plans.</p>
         </div>
         <div class="panel">
-          <p class="panel__label">Ebene 2 — On-Chain Smart Contract</p>
-          <p class="body">Der Legacy Smart Wallet hält die Assets und kennt die Nachlass-Regeln: Begünstigte, Guardians, Fristen.</p>
+          <p class="panel__label" data-en="Layer 2 — on-chain smart contract">Ebene 2 — On-Chain Smart Contract</p>
+          <p class="body" data-en="The Legacy smart wallet holds the assets and knows the inheritance rules: beneficiaries, guardians, deadlines.">Der Legacy Smart Wallet hält die Assets und kennt die Nachlass-Regeln: Begünstigte, Guardians, Fristen.</p>
         </div>
-        <p class="serif-note"><span class="gold-lead">Kernaussage:</span> Der Betreiber besitzt keine Master Keys. Die Vererbungs-Logik ist rein mathematisch und dezentral.</p>
+        <p class="serif-note" data-en="<span class=&quot;gold-lead&quot;>The core claim:</span> The operator holds no master keys. The inheritance logic is purely mathematical and decentralised."><span class="gold-lead">Kernaussage:</span> Der Betreiber besitzt keine Master Keys. Die Vererbungs-Logik ist rein mathematisch und dezentral.</p>
       </div>
 
       <figure class="figure reveal">
         <button class="figure__btn" type="button" data-lightbox="assets/img/fig-arch.jpg">
           <img src="assets/img/fig-arch.jpg" width="1376" height="540" loading="lazy"
-               alt="Zwei Ebenen: die Off-Chain App auf dem Smartphone über dem On-Chain Smart-Contract-Tresor">
+               alt="Zwei Ebenen: die Off-Chain App auf dem Smartphone über dem On-Chain Smart-Contract-Tresor" data-en-alt="Two layers: the off-chain app on the phone above the on-chain smart contract vault">
         </button>
       </figure>
     </div>
@@ -212,19 +216,19 @@
     <div class="grid grid--mid reveal">
       <div class="card card--plain">
         <p class="card__title">LegacyWalletFactory</p>
-        <p class="body body--dim">Der Motor für massentaugliches Deployment. Erzeugt effizient individuelle Tresore für neue Nutzer.</p>
+        <p class="body body--dim" data-en="The engine for deployment at scale. Efficiently creates an individual vault for each new user.">Der Motor für massentaugliches Deployment. Erzeugt effizient individuelle Tresore für neue Nutzer.</p>
       </div>
       <div class="card card--plain">
         <p class="card__title">LegacyWallet</p>
-        <p class="body body--dim">Der individuelle Tresor. Hält die Assets und speichert die unveränderlichen Regeln: Owner, Quoten, Status.</p>
+        <p class="body body--dim" data-en="The individual vault. Holds the assets and stores the immutable rules: owner, shares, status.">Der individuelle Tresor. Hält die Assets und speichert die unveränderlichen Regeln: Owner, Quoten, Status.</p>
       </div>
       <div class="card card--plain">
         <p class="card__title">GuardianRegistry</p>
-        <p class="body body--dim">Das Verifizierungsmodul. Verwaltet die kryptografischen Bestätigungen der Guardians und berechnet die Threshold-Logik.</p>
+        <p class="body body--dim" data-en="The verification module. Manages the guardians’ cryptographic confirmations and evaluates the threshold logic.">Das Verifizierungsmodul. Verwaltet die kryptografischen Bestätigungen der Guardians und berechnet die Threshold-Logik.</p>
       </div>
       <div class="card card--plain card--gold">
-        <p class="card__title card__title--gold">Auditierbar &amp; Open Source</p>
-        <p class="body body--dim" style="color:var(--text-strong)">Vertrauen durch absolute Transparenz des Kerncodes.</p>
+        <p class="card__title card__title--gold" data-en="Auditable &amp; open source">Auditierbar &amp; Open Source</p>
+        <p class="body body--dim" style="color:var(--text-strong)" data-en="Trust through absolute transparency of the core code.">Vertrauen durch absolute Transparenz des Kerncodes.</p>
       </div>
     </div>
   </div>
@@ -234,57 +238,57 @@
 <section class="section section--alt" id="funktionsweise">
   <div class="wrap section__inner">
     <div class="stack">
-      <span class="eyebrow">Funktionsweise</span>
-      <h2 class="h2">Fünf Zustände. Keiner davon gibt Ihre Schlüssel aus der Hand.</h2>
+      <span class="eyebrow" data-en="How It Works">Funktionsweise</span>
+      <h2 class="h2" data-en="Five states. None of them lets your keys out of your hands.">Fünf Zustände. Keiner davon gibt Ihre Schlüssel aus der Hand.</h2>
     </div>
 
     <ol class="grid grid--steps reveal" style="margin:0;padding:0;list-style:none">
       <li class="card card--step">
         <span class="card__num" aria-hidden="true">01</span>
-        <p class="card__title card__title--sm">Normalbetrieb</p>
-        <p class="body body--dim">Eigentümer ist aktiv. Das System ist hermetisch abgeriegelt.</p>
+        <p class="card__title card__title--sm" data-en="Normal operation">Normalbetrieb</p>
+        <p class="body body--dim" data-en="The owner is active. The system is sealed shut.">Eigentümer ist aktiv. Das System ist hermetisch abgeriegelt.</p>
       </li>
       <li class="card card--step">
         <span class="card__num" aria-hidden="true">02</span>
-        <p class="card__title card__title--sm">Auslöser</p>
-        <p class="body body--dim">Check-in verpasst. Das System erlaubt nun die Meldung eines Erbfalls.</p>
+        <p class="card__title card__title--sm" data-en="Trigger">Auslöser</p>
+        <p class="body body--dim" data-en="A check-in was missed. The system now accepts a report of the owner’s death.">Check-in verpasst. Das System erlaubt nun die Meldung eines Erbfalls.</p>
       </li>
       <li class="card card--step">
         <span class="card__num" aria-hidden="true">03</span>
-        <p class="card__title card__title--sm">Prüfung</p>
-        <p class="body body--dim">Guardians verifizieren den Todesfall per On-Chain-Signatur.</p>
+        <p class="card__title card__title--sm" data-en="Verification">Prüfung</p>
+        <p class="body body--dim" data-en="Guardians confirm the death with an on-chain signature.">Guardians verifizieren den Todesfall per On-Chain-Signatur.</p>
       </li>
       <li class="card card--step">
         <span class="card__num" aria-hidden="true">04</span>
         <p class="card__title card__title--sm">Challenge Period</p>
-        <p class="body body--dim">30 Tage Wartefrist als finale Sicherung — jederzeit abbrechbar.</p>
+        <p class="body body--dim" data-en="A 30-day waiting period as the final safeguard — cancellable at any time.">30 Tage Wartefrist als finale Sicherung — jederzeit abbrechbar.</p>
       </li>
       <li class="card card--step">
         <span class="card__num" aria-hidden="true">05</span>
-        <p class="card__title card__title--sm">Verteilung</p>
-        <p class="body body--dim">Assets werden für den Abruf durch die Erben freigegeben.</p>
+        <p class="card__title card__title--sm" data-en="Distribution">Verteilung</p>
+        <p class="body body--dim" data-en="Assets are released for the heirs to claim.">Assets werden für den Abruf durch die Erben freigegeben.</p>
       </li>
     </ol>
 
     <div class="trio reveal">
       <div>
-        <p class="trio__label">Der Dead-Man-Switch</p>
-        <p class="body">Ein verpasster Check-in — etwa nach 180 Tagen Krankheit oder Reise — führt niemals zum automatischen Vermögensverlust.</p>
+        <p class="trio__label" data-en="The dead man’s switch">Der Dead-Man-Switch</p>
+        <p class="body" data-en="A missed check-in — after 180 days of illness or travel, say — never causes an automatic loss of assets.">Ein verpasster Check-in — etwa nach 180 Tagen Krankheit oder Reise — führt niemals zum automatischen Vermögensverlust.</p>
       </div>
       <div>
-        <p class="trio__label">Die Pufferzone</p>
-        <p class="body">Sobald Guardians einen Erbfall melden, wird der Wallet-Status auf <em style="color:var(--cream-dim);font-style:normal">Inheritance Pending</em> gesetzt — 30 Tage lang.</p>
+        <p class="trio__label" data-en="The buffer zone">Die Pufferzone</p>
+        <p class="body" data-en="As soon as guardians report a death, the wallet status is set to <em style=&quot;color:var(--cream-dim);font-style:normal&quot;>Inheritance Pending</em> — for 30 days.">Sobald Guardians einen Erbfall melden, wird der Wallet-Status auf <em style="color:var(--cream-dim);font-style:normal">Inheritance Pending</em> gesetzt — 30 Tage lang.</p>
       </div>
       <div>
         <p class="trio__label">Emergency Stop</p>
-        <p class="body">Während dieser 30 Tage kann der lebende Owner den Prozess jederzeit per Knopfdruck abbrechen und blockieren.</p>
+        <p class="body" data-en="During those 30 days the living owner can cancel and block the process at the press of a button.">Während dieser 30 Tage kann der lebende Owner den Prozess jederzeit per Knopfdruck abbrechen und blockieren.</p>
       </div>
     </div>
 
     <figure class="figure reveal">
       <button class="figure__btn" type="button" data-lightbox="assets/img/fig-machine.jpg">
         <img src="assets/img/fig-machine.jpg" width="1376" height="460" loading="lazy"
-             alt="Der Maschinenraum: die fünf Zustände der Vererbung als Ablaufdiagramm">
+             alt="Der Maschinenraum: die fünf Zustände der Vererbung als Ablaufdiagramm" data-en-alt="The engine room: the five inheritance states as a flow diagram">
       </button>
     </figure>
   </div>
@@ -294,53 +298,53 @@
 <section class="section" id="sicherheit">
   <div class="wrap section__inner">
     <div class="stack">
-      <span class="eyebrow">Sicherheit</span>
-      <h2 class="h2">Vertrauen Sie uns nicht. Prüfen Sie, was wir nicht können.</h2>
-      <p class="lead">Ein Vererbungsdienst, der Ihr Vermögen bewegen könnte, ist ein Verwahrer mit besserem Namen. Legacy Wallet ist so gebaut, dass die folgenden Sätze auch dann gelten, wenn wir es wollten — und auch dann, wenn es uns nicht mehr gibt.</p>
+      <span class="eyebrow" data-en="Security">Sicherheit</span>
+      <h2 class="h2" data-en="Do not trust us. Check what we are unable to do.">Vertrauen Sie uns nicht. Prüfen Sie, was wir nicht können.</h2>
+      <p class="lead" data-en="An inheritance service that could move your assets is a custodian with a nicer name. Legacy Wallet is built so that the statements below hold even if we wanted otherwise — and even if we no longer exist.">Ein Vererbungsdienst, der Ihr Vermögen bewegen könnte, ist ein Verwahrer mit besserem Namen. Legacy Wallet ist so gebaut, dass die folgenden Sätze auch dann gelten, wenn wir es wollten — und auch dann, wenn es uns nicht mehr gibt.</p>
     </div>
 
     <div class="grid grid--cols reveal" style="gap:14px">
       <div class="card card--sec">
         <p class="card__title card__title--cyan">No Master Keys</p>
-        <p class="body body--dim">Der Betreiber hat systembedingt null Zugriff.</p>
+        <p class="body body--dim" data-en="By design, the operator has zero access.">Der Betreiber hat systembedingt null Zugriff.</p>
       </div>
       <div class="card card--sec">
         <p class="card__title card__title--cyan">Local Key Gen</p>
-        <p class="body body--dim">Private Keys verlassen nie das Gerät.</p>
+        <p class="body body--dim" data-en="Private keys never leave the device.">Private Keys verlassen nie das Gerät.</p>
       </div>
       <div class="card card--sec">
         <p class="card__title card__title--cyan">No Single Point of Failure</p>
-        <p class="body body--dim">Guardian-Threshold-System statt zentraler Instanz.</p>
+        <p class="body body--dim" data-en="A guardian threshold system instead of a central authority.">Guardian-Threshold-System statt zentraler Instanz.</p>
       </div>
       <div class="card card--sec">
         <p class="card__title card__title--cyan">Immutable Inheritance</p>
-        <p class="body body--dim">Keine versteckte Kontrolle durch spätere Upgrades.</p>
+        <p class="body body--dim" data-en="No hidden control through later upgrades.">Keine versteckte Kontrolle durch spätere Upgrades.</p>
       </div>
       <div class="card card--sec">
         <p class="card__title card__title--cyan">Challenge Period</p>
-        <p class="body body--dim">Systematischer Schutz vor Falschmeldungen.</p>
+        <p class="body body--dim" data-en="Systematic protection against false reports.">Systematischer Schutz vor Falschmeldungen.</p>
       </div>
       <div class="card card--sec">
         <p class="card__title card__title--cyan">Audited Code</p>
-        <p class="body body--dim">Externe, professionelle Smart-Contract-Audits.</p>
+        <p class="body body--dim" data-en="External, professional smart contract audits.">Externe, professionelle Smart-Contract-Audits.</p>
       </div>
     </div>
 
     <div class="split">
       <div class="split__copy">
-        <p class="h3">Soziales Vertrauen, kryptografisch gesichert.</p>
+        <p class="h3" data-en="Social trust, cryptographically secured.">Soziales Vertrauen, kryptografisch gesichert.</p>
         <div class="split__copy" style="gap:18px">
           <div class="rule">
-            <p class="rule__title">Das Guardian-Modell</p>
-            <p class="body body--dim">Der Nutzer bestimmt vertrauenswürdige Institutionen oder Personen, die den Erbfall bestätigen müssen.</p>
+            <p class="rule__title" data-en="The guardian model">Das Guardian-Modell</p>
+            <p class="body body--dim" data-en="The user names trusted institutions or people who have to confirm the death.">Der Nutzer bestimmt vertrauenswürdige Institutionen oder Personen, die den Erbfall bestätigen müssen.</p>
           </div>
           <div class="rule">
-            <p class="rule__title">Threshold-Sicherheit (2-of-3)</p>
-            <p class="body body--dim">Ein einzelner Akteur kann den Prozess nicht kapern. Erst wenn eine vordefinierte Mehrheit signiert, schaltet der Smart Contract in die Challenge Period.</p>
+            <p class="rule__title" data-en="Threshold security (2-of-3)">Threshold-Sicherheit (2-of-3)</p>
+            <p class="body body--dim" data-en="No single actor can hijack the process. Only once a predefined majority has signed does the smart contract enter the challenge period.">Ein einzelner Akteur kann den Prozess nicht kapern. Erst wenn eine vordefinierte Mehrheit signiert, schaltet der Smart Contract in die Challenge Period.</p>
           </div>
           <div class="rule">
-            <p class="rule__title">Dezentrale Instanzen</p>
-            <p class="body body--dim">Später erweiterbar durch Legal/Death Oracles — Notare als API-Datenquelle.</p>
+            <p class="rule__title" data-en="Decentralised authorities">Dezentrale Instanzen</p>
+            <p class="body body--dim" data-en="Extensible later through legal/death oracles — notaries as an API data source.">Später erweiterbar durch Legal/Death Oracles — Notare als API-Datenquelle.</p>
           </div>
         </div>
       </div>
@@ -348,7 +352,7 @@
       <figure class="figure reveal">
         <button class="figure__btn" type="button" data-lightbox="assets/img/fig-falsepos.jpg">
           <img src="assets/img/fig-falsepos.jpg" width="1376" height="455" loading="lazy"
-               alt="Schutz vor dem False Positive: Guardians signieren, der lebende Owner kann den Prozess stoppen">
+               alt="Schutz vor dem False Positive: Guardians signieren, der lebende Owner kann den Prozess stoppen" data-en-alt="Guarding against the false positive: guardians sign, the living owner can stop the process">
         </button>
       </figure>
     </div>
@@ -360,20 +364,20 @@
   <div class="wrap section__inner">
     <div class="split">
       <div class="split__copy">
-        <span class="eyebrow">Verteilung</span>
-        <h2 class="h2 h2--sm">Pull statt Push.</h2>
-        <p class="lead" style="max-width:none">Automatische Überweisungen an Erben sind fehleranfällig und starr. Legacy Wallet lässt die Begünstigten selbst abrufen.</p>
+        <span class="eyebrow" data-en="Distribution">Verteilung</span>
+        <h2 class="h2 h2--sm" data-en="Pull, not push.">Pull statt Push.</h2>
+        <p class="lead" style="max-width:none" data-en="Automatic transfers to heirs are error-prone and rigid. Legacy Wallet lets the beneficiaries claim for themselves.">Automatische Überweisungen an Erben sind fehleranfällig und starr. Legacy Wallet lässt die Begünstigten selbst abrufen.</p>
         <ul class="dashlist">
-          <li><span>Begünstigte rufen nach Ablauf aller Fristen ihre vordefinierten Quoten proaktiv ab, etwa 50 % / 30 % / 20 %.</span></li>
-          <li><span>Erben müssen keine bestehenden Kunden der Plattform sein.</span></li>
-          <li><span>Eigene, sichere Wallet-Adressen dienen als Empfangsziel.</span></li>
+          <li><span data-en="Once every deadline has passed, beneficiaries actively claim their predefined shares — 50% / 30% / 20%, for example.">Begünstigte rufen nach Ablauf aller Fristen ihre vordefinierten Quoten proaktiv ab, etwa 50 % / 30 % / 20 %.</span></li>
+          <li><span data-en="Heirs do not have to be existing customers of the platform.">Erben müssen keine bestehenden Kunden der Plattform sein.</span></li>
+          <li><span data-en="Their own secure wallet addresses serve as the destination.">Eigene, sichere Wallet-Adressen dienen als Empfangsziel.</span></li>
         </ul>
       </div>
 
       <figure class="figure reveal">
         <button class="figure__btn" type="button" data-lightbox="assets/img/fig-pull.jpg">
           <img src="assets/img/fig-pull.jpg" width="1376" height="600" loading="lazy"
-               alt="Pull statt Push: Begünstigte rufen ihre Quoten selbst aus dem Tresor ab">
+               alt="Pull statt Push: Begünstigte rufen ihre Quoten selbst aus dem Tresor ab" data-en-alt="Pull, not push: beneficiaries claim their shares from the vault themselves">
         </button>
       </figure>
     </div>
@@ -384,18 +388,18 @@
 <section class="section">
   <div class="wrap section__inner" style="gap:40px">
     <div class="stack">
-      <span class="eyebrow">Entkopplung von Protokoll und Profit</span>
-      <h2 class="h2">Die Kernfunktion Ihres Nachlasses darf niemals von einem laufenden Abo abhängen.</h2>
+      <span class="eyebrow" data-en="Protocol and profit, decoupled">Entkopplung von Protokoll und Profit</span>
+      <h2 class="h2" data-en="The core function of your estate must never depend on an active subscription.">Die Kernfunktion Ihres Nachlasses darf niemals von einem laufenden Abo abhängen.</h2>
     </div>
 
     <div class="grid grid--wide reveal">
       <div class="card card--pad-lg">
-        <p class="card__label card__label--lg">On-Chain — kostenlos &amp; ewig</p>
-        <p class="body">Die Smart-Contract-Vererbung. Ist der Wallet einmal deployt, funktioniert der Nachlass-Code für immer auf der Blockchain — selbst wenn das Unternehmen den Betrieb einstellt.</p>
+        <p class="card__label card__label--lg" data-en="On-chain — free &amp; forever">On-Chain — kostenlos &amp; ewig</p>
+        <p class="body" data-en="Smart contract inheritance. Once the wallet is deployed, the inheritance code keeps working on the blockchain forever — even if the company shuts down.">Die Smart-Contract-Vererbung. Ist der Wallet einmal deployt, funktioniert der Nachlass-Code für immer auf der Blockchain — selbst wenn das Unternehmen den Betrieb einstellt.</p>
       </div>
       <div class="card card--pad-lg">
-        <p class="card__label card__label--cyan">Off-Chain — Premium Subscription</p>
-        <p class="body">Komfort und Service: verschlüsselter Dokumententresor, SMS- und Push-Erinnerungen für Check-ins, Asset-Monitoring und Schnittstellen zu Notaren.</p>
+        <p class="card__label card__label--cyan" data-en="Off-chain — premium subscription">Off-Chain — Premium Subscription</p>
+        <p class="body" data-en="Convenience and service: an encrypted document vault, SMS and push reminders for check-ins, asset monitoring, and interfaces for notaries.">Komfort und Service: verschlüsselter Dokumententresor, SMS- und Push-Erinnerungen für Check-ins, Asset-Monitoring und Schnittstellen zu Notaren.</p>
       </div>
     </div>
   </div>
@@ -406,34 +410,34 @@
   <div class="wrap section__inner" style="gap:40px">
     <div class="stack">
       <span class="eyebrow">Execution Plan</span>
-      <h2 class="h2">Der Weg zur Multi-Chain.</h2>
+      <h2 class="h2" data-en="The road to multi-chain.">Der Weg zur Multi-Chain.</h2>
     </div>
 
     <ol class="grid grid--tight reveal" style="margin:0;padding:0;list-style:none">
       <li class="card card--pad-sm">
         <p class="card__label" style="letter-spacing:.18em">Phase 1</p>
         <p class="card__title card__title--sm">Security &amp; Design</p>
-        <p class="body body--dim" style="font-size:14px">Smart-Contract-Spezifikation, Threat Modeling, Guardian-Logik.</p>
+        <p class="body body--dim" style="font-size:14px" data-en="Smart contract specification, threat modelling, guardian logic.">Smart-Contract-Spezifikation, Threat Modeling, Guardian-Logik.</p>
       </li>
       <li class="card card--pad-sm">
         <p class="card__label" style="letter-spacing:.18em">Phase 2</p>
         <p class="card__title card__title--sm">MVP Launch</p>
-        <p class="body body--dim" style="font-size:14px">Wallet-App, EVM-Fokus, LegacyWalletFactory, Backend-Benachrichtigungen.</p>
+        <p class="body body--dim" style="font-size:14px" data-en="Wallet app, EVM focus, LegacyWalletFactory, backend notifications.">Wallet-App, EVM-Fokus, LegacyWalletFactory, Backend-Benachrichtigungen.</p>
       </li>
       <li class="card card--pad-sm">
         <p class="card__label" style="letter-spacing:.18em">Phase 3</p>
-        <p class="card__title card__title--sm">Audit &amp; Härtung</p>
-        <p class="body body--dim" style="font-size:14px">Externe Audits, Bug Bounty, Veröffentlichung des Kerncodes.</p>
+        <p class="card__title card__title--sm" data-en="Audit &amp; hardening">Audit &amp; Härtung</p>
+        <p class="body body--dim" style="font-size:14px" data-en="External audits, bug bounty, publication of the core code.">Externe Audits, Bug Bounty, Veröffentlichung des Kerncodes.</p>
       </li>
       <li class="card card--pad-sm">
         <p class="card__label" style="letter-spacing:.18em">Phase 4</p>
         <p class="card__title card__title--sm">Legal &amp; B2B</p>
-        <p class="body body--dim" style="font-size:14px">Rechtsanalyse für Zielmärkte, Notar- und Anwalts-APIs.</p>
+        <p class="body body--dim" style="font-size:14px" data-en="Legal analysis for target markets, notary and lawyer APIs.">Rechtsanalyse für Zielmärkte, Notar- und Anwalts-APIs.</p>
       </li>
       <li class="card card--pad-sm">
         <p class="card__label" style="letter-spacing:.18em">Phase 5</p>
-        <p class="card__title card__title--sm">Skalierung</p>
-        <p class="body body--dim" style="font-size:14px">Multi-Chain (Bitcoin, Solana), Hardware-Wallet-Integration.</p>
+        <p class="card__title card__title--sm" data-en="Scaling">Skalierung</p>
+        <p class="body body--dim" style="font-size:14px" data-en="Multi-chain (Bitcoin, Solana), hardware wallet integration.">Multi-Chain (Bitcoin, Solana), Hardware-Wallet-Integration.</p>
       </li>
     </ol>
   </div>
@@ -442,19 +446,19 @@
 <!-- ===================== Für wen ===================== -->
 <section class="section" id="fuer-wen">
   <div class="wrap section__inner" style="gap:40px">
-    <span class="eyebrow">Für wen</span>
+    <span class="eyebrow" data-en="Who It Is For">Für wen</span>
     <div class="grid grid--cols reveal">
       <div class="audience">
-        <p class="audience__title">Selbstverwahrende Anleger</p>
-        <p class="body body--dim" style="font-size:16px;line-height:1.65">Die den Schlüssel nie abgeben wollten — und deshalb bisher keinen Weg hatten, ihn weiterzugeben.</p>
+        <p class="audience__title" data-en="Self-custody investors">Selbstverwahrende Anleger</p>
+        <p class="body body--dim" style="font-size:16px;line-height:1.65" data-en="Who never wanted to hand over the key — and so had no way to pass it on.">Die den Schlüssel nie abgeben wollten — und deshalb bisher keinen Weg hatten, ihn weiterzugeben.</p>
       </div>
       <div class="audience">
-        <p class="audience__title">Familien und Erben</p>
-        <p class="body body--dim" style="font-size:16px;line-height:1.65">Die im Ernstfall keine Technik lernen sollen, sondern einer klaren Anleitung folgen.</p>
+        <p class="audience__title" data-en="Families and heirs">Familien und Erben</p>
+        <p class="body body--dim" style="font-size:16px;line-height:1.65" data-en="Who should not have to learn technology when it matters, but simply follow clear instructions.">Die im Ernstfall keine Technik lernen sollen, sondern einer klaren Anleitung folgen.</p>
       </div>
       <div class="audience">
-        <p class="audience__title">Notare und Nachlassverwalter</p>
-        <p class="body body--dim" style="font-size:16px;line-height:1.65">Die digitale Vermögenswerte im Nachlass sauber abbilden müssen — über dokumentierte Schnittstellen.</p>
+        <p class="audience__title" data-en="Notaries and estate administrators">Notare und Nachlassverwalter</p>
+        <p class="body body--dim" style="font-size:16px;line-height:1.65" data-en="Who need to represent digital assets in an estate properly — through documented interfaces.">Die digitale Vermögenswerte im Nachlass sauber abbilden müssen — über dokumentierte Schnittstellen.</p>
       </div>
     </div>
   </div>
@@ -465,11 +469,11 @@
   <div class="cta__glow" aria-hidden="true"></div>
   <div class="cta__line" aria-hidden="true"></div>
   <div class="wrap cta__inner">
-    <h2 class="h2 cta__title">Schlüssel. Regeln. Vermächtnis.</h2>
-    <p class="lead lead--lg" style="max-width:640px">Wir trennen Schlüsselkontrolle, Erbregeln und kommerzielle Services. Der Code sichert Ihr Vermögen — wir liefern die Infrastruktur. Wir senden Ihnen das Projektkonzept und die technische Architektur zu.</p>
+    <h2 class="h2 cta__title" data-en="Keys. Rules. Legacy.">Schlüssel. Regeln. Vermächtnis.</h2>
+    <p class="lead lead--lg" style="max-width:640px" data-en="We separate key control, inheritance rules and commercial services. The code secures your assets — we supply the infrastructure. We will send you the project concept and the technical architecture.">Wir trennen Schlüsselkontrolle, Erbregeln und kommerzielle Services. Der Code sichert Ihr Vermögen — wir liefern die Infrastruktur. Wir senden Ihnen das Projektkonzept und die technische Architektur zu.</p>
     <div class="btn-row">
-      <a class="btn btn--primary" href="mailto:info@legacywallet.at?subject=Konzept%20anfordern%20%E2%80%94%20Legacy%20Wallet">Konzept anfordern</a>
-      <span class="cta__note">oder direkt: <a href="mailto:info@legacywallet.at">info@legacywallet.at</a></span>
+      <a class="btn btn--primary" href="mailto:info@legacywallet.at?subject=Konzept%20anfordern%20%E2%80%94%20Legacy%20Wallet" data-en-href="mailto:info@legacywallet.at?subject=Concept%20request%20%E2%80%94%20Legacy%20Wallet" data-en="Request the concept">Konzept anfordern</a>
+      <span class="cta__note" data-en="or write directly: <a href=&quot;mailto:info@legacywallet.at&quot;>info@legacywallet.at</a>">oder direkt: <a href="mailto:info@legacywallet.at">info@legacywallet.at</a></span>
     </div>
   </div>
 </section>
@@ -479,18 +483,18 @@
 <!-- ===================== Footer ===================== -->
 <footer class="footer">
   <div class="wrap footer__inner">
-    <span>Legacy Wallet — LegacyWallet, Wien</span>
-    <nav class="footer__links" aria-label="Rechtliches">
-      <a href="#kontakt">Impressum</a>
-      <a href="#kontakt">Datenschutz</a>
-      <a href="#kontakt">Kontakt</a>
+    <span data-en="Legacy Wallet — LegacyWallet, Vienna">Legacy Wallet — LegacyWallet, Wien</span>
+    <nav class="footer__links" aria-label="Rechtliches" data-en-aria-label="Legal">
+      <a href="#kontakt" data-en="Imprint">Impressum</a>
+      <a href="#kontakt" data-en="Privacy">Datenschutz</a>
+      <a href="#kontakt" data-en="Contact">Kontakt</a>
     </nav>
   </div>
 </footer>
 
 <!-- Full-size figure viewer -->
-<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Abbildung in voller Größe">
-  <button class="lightbox__close" type="button" id="lightboxClose" aria-label="Schließen">&times;</button>
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Abbildung in voller Größe" data-en-aria-label="Figure at full size">
+  <button class="lightbox__close" type="button" id="lightboxClose" aria-label="Schließen" data-en-aria-label="Close">&times;</button>
   <img class="lightbox__img" id="lightboxImg" src="" alt="">
 </div>
 

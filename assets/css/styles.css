@@ -288,13 +288,31 @@ a:hover { color: var(--gold-light); }
 }
 
 .lang {
+  display: flex;
+  align-items: center;
+  gap: 6px;
   font-size: 13px;
   letter-spacing: .14em;
   color: var(--text-faint);
   white-space: nowrap;
 }
-.lang a { color: var(--text-dim); }
-.lang a:hover { color: var(--cream-dim); }
+.lang__sep { color: var(--text-faint); }
+.lang__btn {
+  font: inherit;
+  letter-spacing: inherit;
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  color: var(--text-dim);
+  transition: color .2s ease;
+}
+.lang__btn:hover { color: var(--cream-dim); }
+/* The active language is a label, not an offer — dim it and take the pointer away. */
+.lang__btn.is-active {
+  color: var(--text-faint);
+  cursor: default;
+}
 
 /* Hamburger — only rendered on small screens. */
 .nav-toggle {
@@ -734,15 +752,19 @@ a:hover { color: var(--gold-light); }
   background: radial-gradient(90% 120% at 12% 50%, rgba(216, 180, 94, .12) 0%, rgba(5, 9, 15, 0) 60%);
   pointer-events: none;
 }
-/* Hairline that fades out to the right, bisecting the section. */
+/* Hairline that enters from the left and fades out before the text column. */
 .cta__line {
   position: absolute;
   left: 0;
-  right: 0;
+  width: calc(50% - (var(--wrap) / 2) + var(--gutter));
   top: 50%;
   height: 1px;
-  background: linear-gradient(90deg, rgba(216, 180, 94, .55), rgba(216, 180, 94, 0) 70%);
+  background: linear-gradient(90deg, rgba(216, 180, 94, .55), rgba(216, 180, 94, 0) 100%);
   pointer-events: none;
+}
+/* Below the wrap width there is no free margin left to draw it in. */
+@media (max-width: 1240px) {
+  .cta__line { display: none; }
 }
 
 .cta__inner {
@@ -828,7 +850,6 @@ a:hover { color: var(--gold-light); }
 @media (max-width: 560px) {
   .banner { padding: 22px 20px; }
   .card { padding: 24px 20px; }
-  .cta__line { display: none; }
 }
 
 /* Users who ask for less motion get the page fully painted, no transitions. */

@@ -5,6 +5,74 @@
 (function () {
   'use strict';
 
+  /* --- Language toggle (DE / EN) ------------------------------------------
+     German lives in the markup; the English of every string sits next to it in
+     a data-en attribute (data-en-<attr> for translated attributes such as alt
+     or aria-label). Swapping is therefore a pure DOM pass — no second page,
+     no dictionary that can drift out of sync with the markup. */
+
+  var LANG_KEY = 'lw-lang';
+  var lang = 'de';
+
+  // The only strings JS sets by itself, so they cannot live in the markup.
+  var NAV_LABEL = {
+    de: { open: 'Menü öffnen', close: 'Menü schließen' },
+    en: { open: 'Open menu', close: 'Close menu' }
+  };
+
+  // One pass over the document collects every translatable spot with both
+  // languages, so later switches touch nothing but the values.
+  var strings = [];
+  Array.prototype.forEach.call(document.querySelectorAll('*'), function (el) {
+    Array.prototype.forEach.call(el.attributes, function (a) {
+      if (a.name === 'data-en') {
+        strings.push({ el: el, attr: null, de: el.innerHTML, en: a.value });
+      } else if (a.name.indexOf('data-en-') === 0) {
+        var target = a.name.slice(8);
+        strings.push({ el: el, attr: target, de: el.getAttribute(target) || '', en: a.value });
+      }
+    });
+  });
+
+  var langButtons = document.querySelectorAll('[data-lang]');
+
+  function applyLang(next, persist) {
+    lang = next === 'en' ? 'en' : 'de';
+    document.documentElement.lang = lang;
+
+    strings.forEach(function (s) {
+      var value = lang === 'en' ? s.en : s.de;
+      if (s.attr) s.el.setAttribute(s.attr, value);
+      else s.el.innerHTML = value;
+    });
+
+    Array.prototype.forEach.call(langButtons, function (btn) {
+      var active = btn.getAttribute('data-lang') === lang;
+      btn.classList.toggle('is-active', active);
+      btn.setAttribute('aria-pressed', active ? 'true' : 'false');
+    });
+
+    // The hamburger's label is set by script, so re-derive it from the state.
+    if (toggle) {
+      var open = header && header.classList.contains('is-open');
+      toggle.setAttribute('aria-label', NAV_LABEL[lang][open ? 'close' : 'open']);
+    }
+
+    if (persist) {
+      try { localStorage.setItem(LANG_KEY, lang); } catch (e) { /* private mode */ }
+    }
+  }
+
+  Array.prototype.forEach.call(langButtons, function (btn) {
+    btn.addEventListener('click', function () {
+      applyLang(btn.getAttribute('data-lang'), true);
+    });
+  });
+
+  var stored = null;
+  try { stored = localStorage.getItem(LANG_KEY); } catch (e) { /* private mode */ }
+  if (stored === 'en') applyLang('en', false);
+
   /* --- Mobile navigation ------------------------------------------------- */
 
   var header = document.getElementById('header');
@@ -15,14 +83,14 @@
     if (!header || !toggle) return;
     header.classList.remove('is-open');
     toggle.setAttribute('aria-expanded', 'false');
-    toggle.setAttribute('aria-label', 'Menü öffnen');
+    toggle.setAttribute('aria-label', NAV_LABEL[lang].open);
   }
 
   if (header && toggle && nav) {
     toggle.addEventListener('click', function () {
       var open = header.classList.toggle('is-open');
       toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-      toggle.setAttribute('aria-label', open ? 'Menü schließen' : 'Menü öffnen');
+      toggle.setAttribute('aria-label', NAV_LABEL[lang][open ? 'close' : 'open']);
     });
 
     // Collapse after jumping to a section, so the target isn't hidden behind
